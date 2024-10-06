@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Pendaftar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Detail Pendaftar</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nama</td>
+          <td id="nama"></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td id="email"></td>
+        </tr>
+        <tr>
+          <td>Usia</td>
+          <td id="usia"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      // Mendapatkan data dari URL query string
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("nama").textContent = params.get("nama");
+      document.getElementById("email").textContent = params.get("email");
+      document.getElementById("usia").textContent = params.get("usia");
+    </script>
+  </body>
+</html>
